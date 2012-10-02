@@ -5,3 +5,4 @@ gem 'gli', "~> 1.3.4"
 gem 'showoff'
 gem 'rmagick'
 gem 'pdfkit'
+gem 'rake'

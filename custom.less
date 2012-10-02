@@ -1,15 +1,33 @@
-/* -*- css -*- */
+// Variables
 
-@gradient-top: #ffffff;
-@gradient-bottom:  #000088;
+// @font-size: 54px;
+@code-font-size: 18px;
+
+// Mixins
+
+.gradient (@gradient-top: #ffffff, @gradient-bottom: #1e5799) {
+  background: @gradient-top; /* Old browsers */
+  background: -moz-linear-gradient(top, @gradient-top 0%, @gradient-bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@gradient-top), color-stop(100%,@gradient-bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, @gradient-top 0%,@gradient-bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, @gradient-top 0%,@gradient-bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, @gradient-top 0%,@gradient-bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom, @gradient-top 0%,@gradient-bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@gradient-top', endColorstr='@gradient-bottom',GradientType=0 ); /* IE6-9 */
+}
+
+.code-block () {
+  font-size: @code-font-size !important;
+  font-family: Mensch, Consolas, Courier, monospace;
+  line-height: 120%;
+}
+
+// Rules
 
 html {
 }
 
 body {
-}
-
-h1 {
 }
 
 ul {
@@ -21,14 +39,36 @@ ul {
 #logo {
   position: absolute;
   top: 10px;
-  left: 10ps;
+  left: 10px;
 }
 
 #preso {
 
   .slide {
-    background: -webkit-gradient(linear, left top, left bottom, from(@gradient-top), to(@gradient-bottom));
-    background: -moz-linear-gradient(top, @gradient-top, @gradient-bottom);
+    .gradient ();
+
+    .content {
+      margin-top: 0 !important;
+
+      h1 {
+        /*
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+        */
+        vertical-align: top;
+      }
+
+      pre {
+        .code-block ();
+
+        &.sh_sourceCode {
+          border: 1px solid black;
+        }
+      }
+    }
   }
 }
 
