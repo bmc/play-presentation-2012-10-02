@@ -1,6 +1,6 @@
 !SLIDE
 
-# The Play! Framework
+# The ![Play logo](play-logo.png) Framework
 
 <div markdown="1" id="logo">
 <img src="ardentex-logo.png"/>
@@ -28,7 +28,7 @@ Founder: PHASE
 
 # What is Play?
 
-* Play is a modern, lightweight MVC web framework
+* Play is a modern, _lightweight_ MVC web framework
 * Play is conceptually similar to Ruby on Rails, Grails, and Django
 * Play is _iterative_. (I'll explain that shortly.)
 * Play is _type safe_ (unlike Rails, Grails or Django).
@@ -45,10 +45,26 @@ Founder: PHASE
 * View = Templates
 * Controller = Interacts with models, renders templates
 
+!SLIDE smbullets incremental transition=fade
+
+# Lightweight
+
+* Bundled with Netty. No external container (e.g., Tomcat) required.
+* No deployment necessary _at all_ during development.
+* _Run your code right where you edit it._
+* No WAR file necessary for deployment.
+* _Can deploy the directory, as is, as long as Play is installed on server._
+* _Play can bundle up a self-contained zip file with all necessary components._
+* _There's a plug-in to generate a WAR file, if you **must** have one._
 
 !SLIDE smbullets incremental transition=fade
 
-!SLIDE smbullets incremental transition=fade
+# Iterative
+
+* During development, Play automatically recompiles templates and code whenever
+  you change them.
+* No more _compile, test, deploy_.
+* Just change the code, and refresh your browser.
 
 !SLIDE smbullets incremental transition=fade
 
