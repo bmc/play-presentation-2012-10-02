@@ -1,0 +1,39 @@
+/* -*- css -*- */
+
+@gradient-top: #ffffff;
+@gradient-bottom:  #008800;
+
+html {
+}
+
+body {
+}
+
+h1 {
+}
+
+ul {
+  li {
+    text-align: left !important;
+  }
+}
+
+#logo {
+  position: absolute;
+  top: 10px;
+  left: 10ps;
+}
+
+#preso {
+
+  .slide {
+    background: -webkit-gradient(linear, left top, left bottom, from(@gradient-top), to(@gradient-bottom));
+    background: -moz-linear-gradient(top, @gradient-top, @gradient-bottom);
+  }
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
