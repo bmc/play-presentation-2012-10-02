@@ -1,16 +1,38 @@
 # -*- ruby -*-
 
-task :default => :run
+task :default => :build
 
-task :build do
-  sh 'sh', '-c', 'lessc custom.less> custom.css'
+PANDOC_OPTS = [
+  '-i',
+  '--self-contained',
+  '-t', 'slidy',
+  '--smart'
+]
+
+task :build => :css do
+  require 'tempfile'
+
+  tmp = Tempfile.new('slides')
+  tmp.close
+  begin
+    args = PANDOC_OPTS + ['-s', 'slides.md', '-o', tmp.path]
+    sh 'pandoc', *args
+    puts "Inserting custom stylesheet and generating slides.html"
+    File.open("slides.html", "w") do |out|
+      File.open(tmp.path).each do |line|
+        if line =~ %r{^</head>}
+          out.puts('<link rel="stylesheet" href="custom.css" type="text/css"/>')
+        end
+        out.write(line)
+      end
+    end
+  ensure
+    tmp.unlink
+  end
 end
 
-task :run => :build do
-  sh 'showoff', 'serve'
-end
+task :css => ['custom.css']
 
-task :static => :build do
-  sh 'showoff', 'static'
+file 'custom.css' => ['custom.less'] do
+  sh 'sh', '-c', 'lessc custom.less >custom.css'
 end
-

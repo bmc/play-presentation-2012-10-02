@@ -1,20 +1,15 @@
-!SLIDE
-
 # The ![Play logo](play-logo.png) Framework
 
 <div markdown="1" id="logo">
 <img src="ardentex-logo.png"/>
 </div>
 
-Brian Clapper
-
-Founder: PHASE
-
-*@bclapper*
-
+Brian Clapper\
+Founder: PHASE\
+*@bclapper*\
 *bmc@ardentex.com*
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Why am I qualified to talk about Play?
 
@@ -24,14 +19,14 @@ Founder: PHASE
 * I'm in the process of becoming a Typesafe-certified Play trainer.
 * I've played with Play...
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Talk Outline
 
 * Overview of Play 2.0
 * Demonstration of Sample Application
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # What is Play?
 
@@ -44,7 +39,7 @@ Founder: PHASE
 * _stateless_.
 * _type safe_ (unlike Rails, Grails or Django).
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # MVC: Quick review
 
@@ -54,7 +49,7 @@ Founder: PHASE
 * View = Templates
 * Controller = Interacts with models, renders templates
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Lightweight
 
@@ -65,7 +60,7 @@ Founder: PHASE
 * Web API is less abstract, more HTTP-aware (than, for instance, Java Servlets)
 * No XML configuration, in most cases. (Yay!)
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Productive
 
@@ -75,7 +70,7 @@ Founder: PHASE
 * Just change the code, and refresh your browser.
 * Rails, Grails and Django all work this way, too.
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Fast
 
@@ -85,7 +80,7 @@ Founder: PHASE
 * Native support for Akka, allowing easy implementation of highly distributed
   systems
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Type Safe
 
@@ -99,7 +94,7 @@ Founder: PHASE
   * Templates that used the old field name are flagged automatically,
     _at compile-time_
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Deployment
 
@@ -110,7 +105,7 @@ Founder: PHASE
 * Play can bundle up a self-contained zip file with all necessary components.
 * There's a plug-in to generate a WAR file, if you **must** have one.
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Bundled Technologies
 
@@ -119,14 +114,14 @@ Founder: PHASE
 * jQuery
 * Twitter Bootstrap helpers
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Getting started
 
 * Follow the installation instructions on the web site.
 * Then, use Play to generate a new application.
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Getting started
 
@@ -157,58 +152,64 @@ Founder: PHASE
 
     Have fun!
 
-!SLIDE bullets incremental transition=fade
+----------
 
 # Default Application Layout
 
     $ tree myapp
 
     myapp
-    ├── app
-    │   ├── controllers
-    │   │   └── Application.java
-    │   └── views
-    │       ├── index.scala.html
-    │       └── main.scala.html
-    ├── conf
-    │   ├── application.conf
-    │   └── routes
-    ├── project
-    │   ├── build.properties
-    │   ├── Build.scala
-    │   └── plugins.sbt
-    ├── public
-    │   ├── images
-    │   │   └── favicon.png
-    │   ├── javascripts
-    │   │   └── jquery-1.7.1.min.js
-    │   └── stylesheets
-    │       └── main.css
-    └── README
+    |---app
+    |   |-- controllers
+    |   |   |
+    |   |   +-- Application.java
+    |   +-- views
+    |       |
+    |       +-- index.scala.html
+    |       |
+    |       +-- main.scala.html
+    +-- conf
+    |   |-- application.conf
+    |   |-- routes
+    +-- project
+    |   |-- build.properties
+    |   |-- Build.scala
+    |   |-- plugins.sbt
+    +-- public
+    |   +-- images
+    |   |   |-- favicon.png
+    |   +-- javascripts
+    |   |   |-- jquery-1.7.1.min.js
+    |   +-- stylesheets
+    |       +-- main.css
+    +-- README
     
     9 directories, 12 files
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # My Usual Layout
 
 I usually add the following directories, as well:
 
     myapp
-    ├── app
-    │   ├── assets
-    │   │   ├── javascripts
-    │   │   │   └── bootstrap
-    │   │   │        └── ...
-    │   │   └── stylesheets
-    │   │       ├── main.less
-    │   │       └── bootstrap
-    │   │            └── ...
-    │   ├── models
-    │   ├── controllers
-    │   ├── views
+    +-- app
+    |   +-- assets
+    |   |   +-- javascripts
+    |   |   |   |
+    |   |   |   +-- bootstrap
+    |   |   |        |
+    |   |   |        +-- ...
+    |   |   +-- stylesheets
+    |   |       |
+    |   |       +-- main.less
+    |   |       |
+    |   |       +-- bootstrap
+    |   |            |
+    |   |            +-- ...
+    |   +-- models
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Models
 
@@ -218,7 +219,7 @@ I usually add the following directories, as well:
 * They can manufacture random objects out of thin air.
 * Play _does_ come with out-of-the-box support for databases, however.
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Models: Scala
 
@@ -232,7 +233,7 @@ I usually add the following directories, as well:
 * You can use other database APIs (e.g., ScalaQuery, Squeryl)
 * Play 2.1.x will ship with Typesafe Slick, not Anorm
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Models: Java
 
@@ -240,28 +241,31 @@ I usually add the following directories, as well:
 * EBean supports JPA annotations
 * True JPA support is available, as well
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Controllers
 
-A simple "hello, world" controller, in Java:
+A simple _hello, world_ controller, in Java:
 
-    @@@ java
-    public class MyApp extends Controller {
-        public static Result index() {
-            return ok("Hello, world!")
-        }
+```java
+public class MyApp extends Controller {
+    public static Result index() {
+        return ok("Hello, world!")
+    }
+}
+```
 
 In Scala:
 
-    @@@ scala
-    object Application extends Controller {
-      def index() = Action {
-        Ok("Hello, world!")
-      }
-    }
+```scala
+object Application extends Controller {
+  def index() = Action {
+    Ok("Hello, world!")
+  }
+}
+```
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Controllers
 
@@ -274,49 +278,55 @@ There are other action verbs, besides `ok`. Examples, in Java:
 * `redirect`
 * These all map pretty closely to HTTP status codes
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Controllers
 
 With a redirect, in Java:
 
-    @@@ java
-    public class MyApp extends Controller {
-        public static Result index() {
-            return redirect(controllers.routes.MainController.index());
-        }
+```java
+public class MyApp extends Controller {
+    public static Result index() {
+        return redirect(controllers.routes.MainController.index());
+    }
+}
+```
 
 In Scala:
 
-    @@@ scala
-    object Application extends Controller {
-      def index() = Action {
-        Redirect(routes.MainController.index)
-      }
-    }
+```scala
+object Application extends Controller {
+  def index() = Action {
+    Redirect(routes.MainController.index)
+  }
+}
+```
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Controllers
 
 Now, with template-rendering goodness. In Java:
 
-    @@@ java
-    public class MyApp extends Controller {
-        public static Result index() {
-            return ok(index.render());
-        }
+```java
+public class MyApp extends Controller {
+    public static Result index() {
+        return ok(index.render());
+    }
+}
+```
 
 In Scala:
 
-    @@@ scala
-    object Application extends Controller {
-      def index() = Action {
-        Ok(views.html.index());
-      }
-    }
+```scala
+object Application extends Controller {
+  def index() = Action {
+    Ok(views.html.index());
+  }
+}
+```
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Routes? WTF are those?
 
@@ -325,23 +335,22 @@ In Scala:
   ugly XML file.
 * ... and they're not very flexible.
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Routes? WTF are those?
 
 * In Play, route mapping is done in a simple text file, `conf/routes`
 * The `routes` file is converted to code and compiled.
-* A "reverse route" source file is also produced.
+* A _reverse route_ source file is also produced.
 * Reverse routes allow programmatic access to URLs, without hardcoding.
 * e.g.:
   * `controllers.routes.MainController.index()` (Java)
   * `routes.MainController.index` (Scala)
 
-!SLIDE
+----------
 
 # Sample route file
 
-    @@@ text
     GET     /                    controllers.Application.index
 
     POST    /sign-in             controllers.Auth.authenticate
@@ -363,7 +372,7 @@ In Scala:
 
     POST    /site/:id/delete     controllers.SiteController.delete(id: Long)
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Templates
 
@@ -371,53 +380,55 @@ In Scala:
 * A template _always_ starts with a parameter list
 * To pass objects to a template, you pass them as parameters
 
-!SLIDE
+----------
 
 # Simple template
 
-    @@@ html
-    @(currentUser: User)
+```html
+@(currentUser: User)
 
-    @main("You've logged in!", currentUser) {
-      <div class="todo-items">
-        Your to-do items follow.
-        <ul>
-          @for(item <- currentUer.toDoItems) {
-            <li>@item.text()</li>
-          }
-        </ul>
-      </div>
-    }
+@main("You've logged in!", currentUser) {
+  <div class="todo-items">
+    Your to-do items follow.
+    <ul>
+      @for(item <- currentUer.toDoItems) {
+        <li>@item.text()</li>
+      }
+    </ul>
+  </div>
+}
+```
 
-!SLIDE
+----------
 
 # Simple template (2)
 
 Main template (in `views/main.scala.html`):
 
-    @@@ html
-    @(title: String, currentUser: User)(content: Html)
+```html
+@(title: String, currentUser: User)(content: Html)
 
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <title>@title</title>
-      </head>
-      <body>
-        ...
-        <div id="content">
-          @content
-        </div>
-      </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>@title</title>
+  </head>
+  <body>
+    ...
+    <div id="content">
+      @content
+    </div>
+  </body>
+</html>
+```
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Let's see an example
 
 (demonstration of sample application)
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # For more information
 
@@ -428,7 +439,7 @@ Main template (in `views/main.scala.html`):
   a Java version of the demo application at
   `https://github.com/bmc/passwordthing-java`
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # For more information
 
@@ -438,7 +449,7 @@ Main template (in `views/main.scala.html`):
   * _Play for Java_: http://www.manning.com/leroux/
 * Stack Overflow is also a good resource for answers to Play questions.
 
-!SLIDE smbullets incremental transition=fade
+----------
 
 # Speaking of questions
 
