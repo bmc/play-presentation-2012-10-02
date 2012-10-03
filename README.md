@@ -6,7 +6,6 @@ Requires the following software:
 
 * [Ruby][]
 * The [Rake][] build tool
-* The [Bundler][] Ruby gem
 * John MacFarlane's excellent [Pandoc][] tool
 * The `lessc` command, to process the [LESS][] stylesheets.
 
