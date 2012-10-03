@@ -65,6 +65,14 @@ body {
 
   ul {
     font-size: @font-size;
+
+    li {
+      ul {
+        li {
+          font-style: normal !important;
+        }
+      }
+    }
   }
 
   margin-top: 0 !important;
@@ -78,6 +86,10 @@ body {
     margin-top: 50px;
     */
     vertical-align: top;
+  }
+
+  code.url {
+    font-size: @font-size - 5px !important;
   }
 
   pre {

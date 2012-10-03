@@ -88,11 +88,11 @@ Founder: PHASE\
 * Models and controllers are compiled to byte code (of course)...
 * ...but _so are the templates_.
 * Nice by-product:
-  * Change the name of a field in a model
-  * Reload browser
-  * Templates are recompiled
-  * Templates that used the old field name are flagged automatically,
-    _at compile-time_
+    + Change the name of a field in a model
+    + Reload browser
+    + Templates are recompiled
+    + Templates that used the old field name are flagged automatically,
+      _at compile-time_
 
 ----------
 
@@ -225,11 +225,11 @@ I usually add the following directories, as well:
 
 * Play 2.0.x for Scala ships with Anorm: thin layer over raw SQL.
 * Has the advantages of direct SQL:
-  * Close to the actual database
-  * No intervening ORM language to learn
+    + Close to the actual database
+    + No intervening ORM language to learn
 * Has all the disadvantages, too:
-  * Potentially RDBMS-specific
-  * Can be fragile and _really_ ugly
+    + Potentially RDBMS-specific
+    + Can be fragile and _really_ ugly
 * You can use other database APIs (e.g., ScalaQuery, Squeryl)
 * Play 2.1.x will ship with Typesafe Slick, not Anorm
 
@@ -344,8 +344,8 @@ object Application extends Controller {
 * A _reverse route_ source file is also produced.
 * Reverse routes allow programmatic access to URLs, without hardcoding.
 * e.g.:
-  * `controllers.routes.MainController.index()` (Java)
-  * `routes.MainController.index` (Scala)
+    + `controllers.routes.MainController.index()` (Java)
+    + `routes.MainController.index` (Scala)
 
 ----------
 
@@ -434,10 +434,10 @@ Main template (in `views/main.scala.html`):
 
 * This presentation will be posted on my web site, _www.ardentex.com_
 * The code for the *PasswordThing* demo application is in my GitHub repo,
-  at `https://github.com/bmc/passwordthing-scala`
+  at <https://github.com/bmc/passwordthing-scala>
 * Once I've finished converting the Scala version to Java, you'll find
   a Java version of the demo application at
-  `https://github.com/bmc/passwordthing-java`
+  <https://github.com/bmc/passwordthing-java>
 
 ----------
 
@@ -445,8 +445,8 @@ Main template (in `views/main.scala.html`):
 
 * Play Framework: _www.playframework.org_
 * Manning has two Play books, both in early access:
-  * _Play for Scala_: http://www.manning.com/hilton/
-  * _Play for Java_: http://www.manning.com/leroux/
+    + _Play for Scala_: <http://www.manning.com/hilton/>
+    + _Play for Java_: <http://www.manning.com/leroux/>
 * Stack Overflow is also a good resource for answers to Play questions.
 
 ----------
