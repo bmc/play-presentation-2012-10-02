@@ -21,7 +21,12 @@ task :build => :css do
     File.open("slides.html", "w") do |out|
       File.open(tmp.path).each do |line|
         if line =~ %r{^</head>}
-          out.puts('<link rel="stylesheet" href="custom.css" type="text/css"/>')
+          custom_css = File.open('custom.css').read
+          out.write <<-EOF
+<style type="text/css">
+#{custom_css}
+</style>
+          EOF
         end
         out.write(line)
       end
