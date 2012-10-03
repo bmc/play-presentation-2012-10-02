@@ -379,13 +379,14 @@ In Scala:
     @(currentUser: User)
 
     @main("You've logged in!", currentUser) {
-        <div class="todo-items">
+      <div class="todo-items">
         Your to-do items follow.
         <ul>
-          @for(item <- user.toDoItems) {
+          @for(item <- currentUer.toDoItems) {
             <li>@item.text()</li>
           }
         </ul>
+      </div>
     }
 
 !SLIDE
@@ -395,12 +396,12 @@ In Scala:
 Main template (in `views/main.scala.html`):
 
     @@@ html
-    @(title: String)(content: Html)
+    @(title: String, currentUser: User)(content: Html)
 
     <!DOCTYPE html>
     <html lang="en">
       <head>
-        ...
+        <title>@title</title>
       </head>
       <body>
         ...
@@ -414,18 +415,18 @@ Main template (in `views/main.scala.html`):
 
 # Let's see an example
 
-(demo and examination of sample application)
-
+(demonstration of sample application)
 
 !SLIDE smbullets incremental transition=fade
 
 # For more information
 
 * This presentation will be posted on my web site, _www.ardentex.com_
-* The code for the sample app, `passwordthing-scala` is in my GitHub repo,
+* The code for the *PasswordThing* demo application is in my GitHub repo,
   at `https://github.com/bmc/passwordthing-scala`
-* I haven't finished converting it to a Java version yet, but that will be
-  posted, eventually, at `https://github.com/bmc/passwordthing-scala`
+* Once I've finished converting the Scala version to Java, you'll find
+  a Java version of the demo application at
+  `https://github.com/bmc/passwordthing-java`
 
 !SLIDE smbullets incremental transition=fade
 
