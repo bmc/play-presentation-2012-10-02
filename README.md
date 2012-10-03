@@ -21,6 +21,9 @@ You'll find the source for the slides in `slides.md`, a Markdown file.
 For more information on using [Pandoc][] for slide generation, see
 <http://johnmacfarlane.net/pandoc/README.html#producing-slide-shows-with-pandoc>.
 
+You can view a pre-built version of this presentation at
+<http://www.ardentex.com/publications/the-play-framework/>.
+
 [Ruby]: http://www.ruby-lang.org/
 [Rake]: http://rake.rubyforge.org/
 [Bundler]: http://gembundler.com/
