@@ -1,4 +1,4 @@
-# The ![Play logo](play-logo.png) Framework
+# The Play Framework
 
 <div markdown="1" id="logo">
 <img src="ardentex-logo.png"/>
@@ -30,7 +30,7 @@ Founder: PHASE\
 
 # What is Play?
 
-## Play, version 2 is:
+Play, version 2 is:
 
 * a modern, _lightweight_ MVC web framework
 * conceptually similar to Ruby on Rails, Grails, and Django
@@ -125,20 +125,17 @@ Founder: PHASE\
 
 # Getting started
 
+ Type:
+
     $ play new myapp
-           _            _ 
-     _ __ | | __ _ _  _| |
-    | '_ \| |/ _' | || |_|
-    |  __/|_|\____|\__ (_)
-    |_|            |__/ 
-                 
-    play! 2.0.4-RC2, http://www.playframework.org
-    
-    The new application will be created in
-    /home/bmc/src/mystuff/play/myapp
-    
+    [verbose output omitted]
+
+You'll be prompted to confirm the application name:
+
     What is the application name? 
     > myapp
+
+You'll be prompted to specify the app type:
 
     Which template do you want to use for this new application? 
 
@@ -148,43 +145,38 @@ Founder: PHASE\
 
     > 1
 
-    OK, application myapp is created.
+... and your new app structure is created.
 
-    Have fun!
 
 ----------
 
 # Default Application Layout
 
-    $ tree myapp
+Play creates a directory tree structure like this:
 
-    myapp
-    |---app
-    |   |-- controllers
-    |   |   |
-    |   |   +-- Application.java
-    |   +-- views
-    |       |
-    |       +-- index.scala.html
-    |       |
-    |       +-- main.scala.html
-    +-- conf
-    |   |-- application.conf
-    |   |-- routes
-    +-- project
-    |   |-- build.properties
-    |   |-- Build.scala
-    |   |-- plugins.sbt
-    +-- public
-    |   +-- images
-    |   |   |-- favicon.png
-    |   +-- javascripts
-    |   |   |-- jquery-1.7.1.min.js
-    |   +-- stylesheets
-    |       +-- main.css
-    +-- README
-    
-    9 directories, 12 files
+    myapp/
+        app/
+           controllers/
+               Application.java
+           views/
+               index.scala.html
+               main.scala.html
+           conf/
+               application.conf
+               routes
+           project/
+               build.properties
+               Build.scala
+               plugins.sbt
+           public/
+               images/
+                   favicon.png
+               javascripts/
+                   jquery-1.7.1.min.js
+               stylesheets
+                   main.css
+        README
+
 
 ----------
 
@@ -192,22 +184,27 @@ Founder: PHASE\
 
 I usually add the following directories, as well:
 
-    myapp
-    +-- app
-    |   +-- assets
-    |   |   +-- javascripts
-    |   |   |   |
-    |   |   |   +-- bootstrap
-    |   |   |        |
-    |   |   |        +-- ...
-    |   |   +-- stylesheets
-    |   |       |
-    |   |       +-- main.less
-    |   |       |
-    |   |       +-- bootstrap
-    |   |            |
-    |   |            +-- ...
-    |   +-- models
+    myapp/
+        app/
+           assets/
+               javascripts/
+                   bootstrap/
+                       ...
+                stylesheets/
+                    main.less
+                    bootstrap/
+            models/
+
+----------
+
+# My Usual Layout
+
+I also:
+
+* delete `app/public/stylesheets/main.css` (which will be 
+  served statically), and 
+* add `app/assets/stylesheets/main.less` (which will be auto-compiled to 
+  a CSS file)
 
 ----------
 
