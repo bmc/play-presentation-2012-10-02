@@ -6,7 +6,7 @@
 
 Brian Clapper\
 Founder: PHASE\
-*@bclapper*\
+*@brianclapper*\
 *bmc@ardentex.com*
 
 ----------
