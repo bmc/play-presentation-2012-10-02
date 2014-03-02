@@ -7,7 +7,7 @@ task :default => :build
 PANDOC_HTML_OPTS = [
   '-i',
   '--self-contained',
-  '-t', 'slidy',
+  '-t', 'revealjs',
   '--smart'
 ]
 
